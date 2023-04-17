@@ -1,0 +1,62 @@
+html,
+body {
+  font-family: $font-main;
+  font-size: $font-size;
+  line-height: 1.5;
+}
+
+.btn {
+  line-height: 1.5;
+  font-weight: 700;
+  &-primary {
+    color: $white-color;
+  }
+  &-outline-secondary {
+    color: $dark;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.bg-dark {
+  .header {
+    &__nav {
+      &-link {
+        color: $white-color;
+        &.active {
+          color: $white-color;
+        }
+      }
+    }
+
+    &__select {
+      color: $white-color;
+    }
+
+    &__navbar {
+      &-toggler {
+        background-color: rgba($white-color, 0.5);
+      }
+    }
+  }
+  .sidebar {
+    &__nav {
+      &-link {
+        color: $white-color;
+      }
+    }
+  }
+
+  .blog {
+    &__card {
+      background: rgba($white-color, 0.5);
+
+      &-more {
+        color: $white-color;
+      }
+    }
+  }
+}

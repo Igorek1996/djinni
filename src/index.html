@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Bootstrap w/ Webpack</title>
+  </head>
+  <body>
+    <header class="header navbar navbar-expand-lg py-3">
+      <div class="container">
+        <button
+          class="header__navbar-toggler navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="header__navbar collapse navbar-collapse" id="navbarNav">
+          <form class="header__form col-6">
+            <div class="header__search input-group">
+              <button
+                type="submit"
+                class="header__search-button input-group-text rounded-pill rounded-end"
+                id="basic-addon1"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+              <input
+                type="text"
+                class="header__search-field form-control rounded-pill rounded-start"
+                placeholder="Search for anything..."
+                aria-label="Input group example"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </form>
+          <ul class="header__nav navbar-nav col-3">
+            <li class="header__nav-item nav-item mx-2">
+              <a
+                class="header__nav-link nav-link active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="header__nav-item nav-item mx-2">
+              <a class="header__nav-link nav-link" href="#">About</a>
+            </li>
+            <li class="header__nav-item nav-item mx-2">
+              <a class="header__nav-link nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="header__theme d-flex justify-content-center col-1">
+            <label class="form-check-label" for="lightSwitch">
+              <i class="bi bi-brightness-high"></i>
+            </label>
+            <input
+              style="display: none"
+              class="form-check-input"
+              type="checkbox"
+              id="lightSwitch"
+            />
+          </div>
+          <div
+            class="header__settings navbar-nav d-flex col-2 justify-content-end"
+          >
+            <div class="nav-item dropdown ms-3">
+              <a
+                class="header__select nav-link dropdown-toggle"
+                href="#"
+                id="languageDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                English
+                <span class="header__select-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">French</a>
+              </div>
+            </div>
+            <a href="#" class="header__nav-link nav-link ms-3">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container py-4">
+      <div class="row">
+        <aside class="sidebar col-md-3 col-sm-12 me-auto">
+          <ul class="sidebar__nav nav nav-pills flex-column mb-auto">
+            <li class="sidebar__nav-item nav-item">
+              <a
+                href="#"
+                class="sidebar__nav-link nav-link active me-2"
+                aria-current="page"
+              >
+                <i class="bi bi-image me-2"></i>
+                All photos
+              </a>
+            </li>
+            <li class="sidebar__nav-item nav-item">
+              <a href="#" class="sidebar__nav-link nav-link">
+                <i class="bi bi-emoji-smile me-2"></i>
+                Selfies
+              </a>
+            </li>
+            <li class="sidebar__nav-item nav-item">
+              <a href="#" class="sidebar__nav-link nav-link">
+                <i class="bi bi-clock me-2"></i>
+                Recent
+              </a>
+            </li>
+            <li class="sidebar__nav-item nav-item">
+              <a href="#" class="sidebar__nav-link nav-link">
+                <i class="bi bi-trash me-2"></i>
+                Deleted
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        <main class="col-md-8 col-sm-12">
+          <div class="d-flex align-items-center">
+            <h1 class="me-auto">All photos</h1>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-dark">Newest</button>
+              <button type="button" class="btn btn-light">Latest</button>
+            </div>
+          </div>
+          <p class="fw-bold"><span id="quantity"></span> items</p>
+
+          <div class="blog row" id="blog"></div>
+        </main>
+      </div>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
